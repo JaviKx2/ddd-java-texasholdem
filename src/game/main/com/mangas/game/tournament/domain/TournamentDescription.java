@@ -1,4 +1,4 @@
-package game.main.com.mangas.game.tournament;
+package game.main.com.mangas.game.tournament.domain;
 
 public class TournamentDescription {
     private String description;
