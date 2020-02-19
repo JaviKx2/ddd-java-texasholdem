@@ -1,4 +1,4 @@
-package com.mangas.game.tournament.domain;
+package com.mangas.backoffice.tournament.domain;
 
 public class Tournament {
     private TournamentName name;

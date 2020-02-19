@@ -1,7 +1,6 @@
-package com.mangas.game.tournament.application;
+package com.mangas.backoffice.tournament.application;
 
-
-import com.mangas.game.tournament.domain.*;
+import com.mangas.backoffice.tournament.domain.*;
 
 import java.math.BigDecimal;
 
