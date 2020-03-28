@@ -1,6 +1,7 @@
 package com.mangas.backoffice.tournament.domain;
 
 public class Tournament {
+    private TournamentId id;
     private TournamentName name;
     private TournamentDescription description;
     private TournamentBuyIn buyIn;
