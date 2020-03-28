@@ -4,14 +4,14 @@ import com.mangas.backoffice.tournament.domain.*;
 
 import java.math.BigDecimal;
 
-public class TournamentCreator {
-    private TournamentCreatorRepository repository;
+public final class TournamentCreator {
+    private final TournamentCreatorRepository repository;
 
     public TournamentCreator(TournamentCreatorRepository repository) {
         this.repository = repository;
     }
 
-    public void create(String name, String description, BigDecimal buyIn, int maxSize) {
+    public void create(final String name, final String description, final BigDecimal buyIn, final int maxSize) {
         this.repository.save(
                 new Tournament(
                         new TournamentName(name),
