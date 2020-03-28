@@ -7,7 +7,8 @@ public class Tournament {
     private TournamentBuyIn buyIn;
     private TournamentMaxSize maxSize;
 
-    public Tournament(TournamentName name, TournamentDescription description, TournamentBuyIn buyIn, TournamentMaxSize maxSize) {
+    public Tournament(TournamentId id, TournamentName name, TournamentDescription description, TournamentBuyIn buyIn, TournamentMaxSize maxSize) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.buyIn = buyIn;
