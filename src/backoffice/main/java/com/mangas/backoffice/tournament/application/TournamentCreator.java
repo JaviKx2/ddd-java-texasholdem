@@ -11,14 +11,7 @@ public final class TournamentCreator {
         this.repository = repository;
     }
 
-    public void create(final String name, final String description, final BigDecimal buyIn, final int maxSize) {
-        this.repository.save(
-                new Tournament(
-                        new TournamentName(name),
-                        new TournamentDescription(description),
-                        new TournamentBuyIn(buyIn),
-                        new TournamentMaxSize(maxSize)
-                )
-        );
+    public void create(Tournament tournament) {
+        repository.save(tournament);
     }
 }
