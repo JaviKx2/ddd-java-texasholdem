@@ -1,8 +1,7 @@
 package com.mangas.backoffice.tournament.application;
 
-import com.mangas.backoffice.tournament.domain.*;
-
-import java.math.BigDecimal;
+import com.mangas.backoffice.tournament.domain.Tournament;
+import com.mangas.backoffice.tournament.domain.TournamentCreatorRepository;
 
 public final class TournamentCreator {
     private final TournamentCreatorRepository repository;
