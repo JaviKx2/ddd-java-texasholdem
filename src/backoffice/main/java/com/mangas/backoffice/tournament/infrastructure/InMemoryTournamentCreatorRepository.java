@@ -1,6 +1,6 @@
 package com.mangas.backoffice.tournament.infrastructure;
 
-import com.mangas.backoffice.tournament.application.TournamentCreatorRepository;
+import com.mangas.backoffice.tournament.domain.TournamentCreatorRepository;
 import com.mangas.backoffice.tournament.domain.Tournament;
 
 import java.util.ArrayList;
