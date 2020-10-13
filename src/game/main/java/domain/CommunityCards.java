@@ -8,4 +8,14 @@ public class CommunityCards {
     public CommunityCards(List<Card> cards) {
         this.cards = cards;
     }
+
+    public void setFlop(List<Card> cards) {
+        if (this.cards.size() != 0) {
+            throw new IllegalStateException();
+        }
+        if(cards.size() != 3) {
+            throw new RuntimeException();
+        }
+        this.cards.addAll(cards);
+    }
 }

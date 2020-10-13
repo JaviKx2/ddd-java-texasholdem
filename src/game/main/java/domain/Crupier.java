@@ -5,19 +5,17 @@ import java.util.function.Function;
 
 public class Crupier {
     private final Function<List<Card>, List<Card>> shuffleStrategy;
-    private Deck deck;
 
-    public Crupier(Deck deck, Function<List<Card>, List<Card>> shuffleStrategy) {
-        this.deck = deck;
+    public Crupier(Function<List<Card>, List<Card>> shuffleStrategy) {
         this.shuffleStrategy = shuffleStrategy;
     }
 
-    public void shuffle() {
+    public void shuffle(Deck deck) {
         deck.shuffle(shuffleStrategy);
     }
 
-    public void dealFlop(Table table) {
+    public void dealFlop(Deck deck, CommunityCards communityCards) {
         List<Card> cards = deck.takeTopThree();
-
+        communityCards.setFlop(cards);
     }
 }
