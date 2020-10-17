@@ -18,4 +18,14 @@ public class Crupier {
         List<Card> cards = deck.takeTopThree();
         communityCards.setFlop(cards);
     }
+
+    public void dealRiver(Deck deck, CommunityCards communityCards) {
+        Card card = deck.takeTopOne();
+        communityCards.setTurn(card);
+    }
+
+    public void dealTurn(Deck deck, CommunityCards communityCards) {
+        Card card = deck.takeTopOne();
+        communityCards.setRiver(card);
+    }
 }

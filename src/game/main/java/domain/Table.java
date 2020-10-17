@@ -2,11 +2,11 @@ package domain;
 
 import java.util.Set;
 
-public class Table {
-    private Crupier crupier;
-    private Set<Player> players;
-    private CommunityCards communityCards;
-    private Deck deck;
+public final class Table {
+    private final Crupier crupier;
+    private final Set<Player> players;
+    private final CommunityCards communityCards;
+    private final Deck deck;
 
     public Table(Crupier crupier, Set<Player> players, CommunityCards communityCards, Deck deck) {
         this.crupier = crupier;
@@ -17,6 +17,14 @@ public class Table {
 
     public void setFlop() {
         crupier.dealFlop(deck, communityCards);
+    }
+
+    public void setTurn() {
+        crupier.dealTurn(deck, communityCards);
+    }
+
+    public void setRiver() {
+        crupier.dealRiver(deck, communityCards);
     }
 
 
