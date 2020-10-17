@@ -1,6 +1,5 @@
 package domain;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
@@ -13,16 +12,10 @@ public class Deck {
     }
 
     public List<Card> takeTopThree() {
-        return new ArrayList<>(
-                Arrays.asList(
-                        takeTop(),
-                        takeTop(),
-                        takeTop()
-                )
-        );
+        return Arrays.asList(takeTopOne(), takeTopOne(), takeTopOne());
     }
 
-    public Card takeTop() {
+    public Card takeTopOne() {
         return cards.remove(0);
     }
 }
