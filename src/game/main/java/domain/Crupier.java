@@ -14,18 +14,28 @@ public class Crupier {
         deck.shuffle(shuffleStrategy);
     }
 
-    public void dealFlop(Deck deck, CommunityCards communityCards) {
+    private void dealFlop(Deck deck, CommunityCards communityCards) {
         List<Card> cards = deck.takeTopThree();
         communityCards.setFlop(cards);
     }
 
-    public void dealRiver(Deck deck, CommunityCards communityCards) {
+    private void dealRiver(Deck deck, CommunityCards communityCards) {
         Card card = deck.takeTopOne();
         communityCards.setTurn(card);
     }
 
-    public void dealTurn(Deck deck, CommunityCards communityCards) {
+    private void dealTurn(Deck deck, CommunityCards communityCards) {
         Card card = deck.takeTopOne();
         communityCards.setRiver(card);
+    }
+
+    public void dealNext(Deck deck, CommunityCards communityCards) {
+        if (communityCards.isFlopDealt()) {
+            dealTurn(deck, communityCards);
+        } else if(communityCards.isTurnDealt()){
+            dealRiver(deck, communityCards);
+        } else {
+            dealFlop(deck, communityCards);
+        }
     }
 }

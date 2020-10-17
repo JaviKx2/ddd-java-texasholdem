@@ -15,16 +15,8 @@ public final class Table {
         this.deck = deck;
     }
 
-    public void setFlop() {
-        crupier.dealFlop(deck, communityCards);
-    }
-
-    public void setTurn() {
-        crupier.dealTurn(deck, communityCards);
-    }
-
-    public void setRiver() {
-        crupier.dealRiver(deck, communityCards);
+    public void deal() {
+        crupier.dealNext(deck, communityCards);
     }
 
 

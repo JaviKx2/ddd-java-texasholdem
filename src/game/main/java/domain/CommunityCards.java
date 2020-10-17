@@ -34,4 +34,12 @@ public class CommunityCards {
         }
         cards.add(card);
     }
+
+    public boolean isFlopDealt() {
+        return cards.size() == FLOP_LIMIT;
+    }
+
+    public boolean isTurnDealt() {
+        return cards.size() == TURN_INCL_LIMIT;
+    }
 }
