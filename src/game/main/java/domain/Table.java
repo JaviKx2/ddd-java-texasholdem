@@ -20,6 +20,23 @@ public final class Table {
     }
 
 
+    public void start() {
+        while(!hasGameEnded()) {
+            // TODO Start round / turn
+            Round round = new Round();
+            while(round.isRunning()){
+                round.nextTurn();
+                // TODO Ask for Player / User action
+            }
+        }
+    }
+
+    private boolean hasGameEnded() {
+        // TODO Game ends when an unique player gathered all chips
+        return true;
+    }
+
+
 
 
 }
