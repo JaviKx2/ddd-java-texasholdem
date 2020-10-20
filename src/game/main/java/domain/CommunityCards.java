@@ -1,5 +1,6 @@
 package domain;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CommunityCards {
@@ -7,8 +8,8 @@ public class CommunityCards {
     private static final int TURN_INCL_LIMIT = FLOP_LIMIT + 1;
     private final List<Card> cards;
 
-    public CommunityCards(List<Card> cards) {
-        this.cards = cards;
+    public CommunityCards() {
+        this.cards = new ArrayList<>();
     }
 
     public void setFlop(List<Card> flopCards) {
